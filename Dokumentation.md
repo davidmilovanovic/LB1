@@ -7,7 +7,11 @@ Die LB1 besteht darin, ein Service zur Verfügung zu stellen. Dieser Service sol
 
 ## Glossar
 Vagrant:
+
 Markdown:
+
 Apache2:
+
 PHPmyAdmin:
+
 SQL-Server:
