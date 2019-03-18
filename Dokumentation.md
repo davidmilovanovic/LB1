@@ -6,13 +6,18 @@ Die LB1 besteht darin, ein Service zur Verfügung zu stellen. Dieser Service sol
 
 ## Mein Service
 
+Bei meinem Service wird ein Webserver erstellt. Auf dem Webserver läuft die Webanwendung phpMyadmin, welches mit dem sql-Server verbunden ist.
+
+![Image](m300Verbindung.png)
+
 ## Glossar
+
 Vagrant:
 
 Markdown:
 
 Apache2:
 
-PHPmyAdmin:
+phpMyAdmin:
 
 SQL-Server:
