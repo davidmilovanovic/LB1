@@ -10,14 +10,22 @@ Bei meinem Service wird ein Webserver erstellt. Auf dem Webserver läuft die Web
 
 ![Image](m300Verbindung.png)
 
+#### Zugriff auf den Service
+
+#### Das Vagrantfile
+
+## Sicherheitsaspekte
+
+## Reflexion
+
 ## Glossar
 
-Vagrant:
+Vagrant: Mit Vagrant kann man virtuelle Maschinen erstellen und verwalten.
 
-Markdown:
+Markdown: Ist eine vereinfachte Auszeichnungssprache.
 
-Apache2:
+Apache2: Ist ein Webserver.
 
-phpMyAdmin:
+phpMyAdmin: Freie Webanwendung zur Administration von MySQL-Datenbanken/MariaDB
 
-SQL-Server:
+SQL-Server: Datenbank mit der Sprache sql
