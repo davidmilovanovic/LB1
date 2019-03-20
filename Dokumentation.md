@@ -25,7 +25,8 @@ Damit unser Client überhaupt Vagrant versteht, muss Vagrant von ihrer Webseite 
 ##### Visual Studio Code
 Alle lokalen Repositories an einem Ort zu verwalten und die dazugehörigen Dateien zu bearbeiten ermöglicht uns Visual Studio Code. Stduio Code kann man sich ganz einfach von ihrer Webseite herunterladen.
 
-Die genaue Anleitung für die installationen findet man hier:
+Die genaue Anleitung für die installationen:
+[Kapitel 20](https://github.com/mc-b/M300/blob/master/10-Toolumgebung/README.md)
 
 
 
