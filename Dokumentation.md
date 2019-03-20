@@ -40,10 +40,11 @@ Bei meinem Service wird ein Webserver erstellt. Auf dem Webserver läuft die Web
 
 ## Sicherheitsaspekte
 
-Um die Sicherheit unseres Services zu schützen, wird in unser Vagrantfile diese drei Sachen hinzugefügt:<br />
+Um die Sicherheit unseres Services zu schützen, werden in unser Vagrantfile diese drei Sachen hinzugefügt:<br />
 * Benutzer mit Rechtevergabe
 * Firewall
 * Reverse Proxy
+Durch die entsprechende Rechtevergabe können unbefugte Benutzer nicht Dinge machen, die eigentlich nicht für sie Gedacht wären. Mit der Firewall können wir entsprechende Ports öffnen und schliessen. Nur Ports, welche für den Service benötigt sind, sollten offen sein. Durch den Reverse-Proxy ist der Webserver vor direkten Angriffen von aussen gesichert. Die Internetuser kommunizieren mit dem Proxy, und nicht mit dem Webserver.
 
 ## Reflexion
 
