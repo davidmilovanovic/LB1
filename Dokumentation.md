@@ -40,8 +40,10 @@ Bei meinem Service wird ein Webserver erstellt. Auf dem Webserver läuft die Web
 
 ## Sicherheitsaspekte
 
-Um die Sicherheit unseres Services zu schützen, wird in unser Vagrantfile diese drei Punkte hinzugefügt:<br />
-dd
+Um die Sicherheit unseres Services zu schützen, wird in unser Vagrantfile diese drei Sachen hinzugefügt:<br />
+* Benutzer mit Rechtevergabe
+* Firewall
+* Reverse Proxy
 
 ## Reflexion
 
