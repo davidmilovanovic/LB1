@@ -7,28 +7,26 @@ Die LB1 besteht darin, ein Service zur Verfügung zu stellen. Dieser Service sol
 ##Voraussetzungen
 Damit der Service erstellt werden kann, müssen vorerst einige Dinge noch erledigt werden:
 
-##### GitHub Account
+**GitHub Account**<br />
 GitHub dient sozusagen als Cloud-Speicher unserer Dateien und Dokumentationen.
 
-##### ssh Keys
+**ssh Keys**<br />
 Die ssh schlüssel ermöglichen uns, eine verschlüsselte Netzwerkverbindung aufzubauen.
 
-##### Git Client
+**Git Client**<br />
 Um unsere Dateien von GitHub auf unseren lokalen Comupter zu holen, benötigen wir Git client. Unter Windows nennt sich das Git/Bash.
 
-##### VirtualBox
+**VirtualBox**<br />
 Zueinem benötigen wir einen Hypervisor, welcher unsere VMs erstellt. In unserem Fall benutzen wir VirtualBox, da bei Vagrant Boxes dieser Hypervisor überall unterstützt wird.
 
-##### Vagrant
+**Vagrant**<br />
 Damit unser Client überhaupt Vagrant versteht, muss Vagrant von ihrer Webseite heruntergeladen werden.
 
-##### Visual Studio Code
+**Visual Studio Code**<br />
 Alle lokalen Repositories an einem Ort zu verwalten und die dazugehörigen Dateien zu bearbeiten ermöglicht uns Visual Studio Code. Stduio Code kann man sich ganz einfach von ihrer Webseite herunterladen.
 
 Die genaue Anleitung für die installationen:
 [Kapitel 20](https://github.com/mc-b/M300/blob/master/10-Toolumgebung/README.md)
-
-
 
 ## Mein Service
 
@@ -41,6 +39,9 @@ Bei meinem Service wird ein Webserver erstellt. Auf dem Webserver läuft die Web
 #### Das Vagrantfile
 
 ## Sicherheitsaspekte
+
+Um die Sicherheit unseres Services zu schützen, wird in unser Vagrantfile diese drei Punkte hinzugefügt:<br />
+dd
 
 ## Reflexion
 
