@@ -4,6 +4,8 @@
 1. [Aufgabenstellung](#Aufgabenstellung)
 2. [Voraussetzungen](#Voraussetzungen)
 3. [Mein Service](#id-section2)
+4. [Sicherheitsaspekte](#Voraussetzungen)
+4. [Wissenszuwachs](#Voraussetzungen)
 
 ## Aufgabenstellung
 
