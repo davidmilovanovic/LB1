@@ -3,7 +3,7 @@
 ## Inhaltsverzeichnis
 1. [Aufgabenstellung](#Aufgabenstellung)
 2. [Voraussetzungen](#Voraussetzungen)
-3. [Mein Service](#Mein_Service)
+3. [Mein Service](#id-section2)
 
 ## Aufgabenstellung
 
@@ -33,7 +33,8 @@ Alle lokalen Repositories an einem Ort zu verwalten und die dazugehörigen Datei
 Die genaue Anleitung für die installationen:
 [Kapitel 20](https://github.com/mc-b/M300/blob/master/10-Toolumgebung/README.md)
 
-## [Mein Service](#){name=Mein-Service}
+<div id='id-section2'/>
+## Mein Service
 
 Bei meinem Service wird ein Webserver erstellt. Auf dem Webserver läuft die Webanwendung phpMyadmin, welches mit dem sql-Server verbunden ist.
 
