@@ -3,7 +3,7 @@
 ## Inhaltsverzeichnis
 1. [Aufgabenstellung](#Aufgabenstellung)
 2. [Voraussetzungen](#Voraussetzungen)
-3. [Mein Service](#"Mein Service")
+3. [Mein Service](#MeinService)
 
 ## Aufgabenstellung
 
