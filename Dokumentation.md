@@ -1,9 +1,9 @@
 # Modul 300 - Leistungsbeurteilung 1
 
-# Inhaltsverzeichnis
-1. [Example](#Aufgabenstellung)
-2. [Example2](#Voraussetzungen)
-3. [Third Example](#Mein Service)
+## Inhaltsverzeichnis
+1. [Aufgabenstellung](#Aufgabenstellung)
+2. [Voraussetzungen](#Voraussetzungen)
+3. [Mein Service](#"Mein Service")
 
 ## Aufgabenstellung
 
