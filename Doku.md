@@ -37,7 +37,7 @@ Die genaue Anleitung für die installationen:
 
 ## Netzwerkplan
 
-![Image](test.png)        
+![Image](test2.png)        
 
 <div id='id-section2'/>
 
