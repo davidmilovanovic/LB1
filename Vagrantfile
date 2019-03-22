@@ -57,15 +57,15 @@ config.vm.provision "shell", inline: <<-SHELL
         sudo ufw -f enable
       
       #FireWall regeln
+      sudo ufw allow 22/tcp
+
         sudo ufw allow 80/tcp
 
         sudo ufw allow 8080/tcp
 
-        sudo ufw allow 22/tcp
-
 #User erstellen
-adduser test
-echo 'view:pass' | chpasswd
+#adduser test
+#echo 'view:pass' | chpasswd
 
 SHELL
 

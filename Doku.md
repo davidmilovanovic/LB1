@@ -1,17 +1,23 @@
 # Modul 300 - Leistungsbeurteilung 1
 
 ## Inhaltsverzeichnis
-1. [Aufgabenstellung](#Aufgabenstellung)
-2. [Voraussetzungen](#Voraussetzungen)
-3. [Mein Service](#id-section2)
-4. [Sicherheitsaspekte](#Voraussetzungen)
-5. [Wissenszuwachs](#Voraussetzungen)
+- [Modul 300 - Leistungsbeurteilung 1](#modul-300---leistungsbeurteilung-1)
+  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
+  - [Aufgabenstellung](#aufgabenstellung)
+  - [Voraussetzungen/WichtigeThemen](#voraussetzungenwichtigethemen)
+  - [Netzwerkplan](#netzwerkplan)
+  - [Mein Service](#mein-service)
+  - [Sicherheitsaspekte](#sicherheitsaspekte)
+  - [Testing](#testing)
+  - [Wissenszuwachs](#wissenszuwachs)
+  - [Reflexion](#reflexion)
+  - [Glossar](#glossar)
 
 ## Aufgabenstellung
 
 Die LB1 besteht darin, ein Service zur Verfügung zu stellen. Dieser Service sollte mit dem starten eines Vagrantfiles ohne weitere Konfigurationen starten. Das ganze sollte anschliessend mit Markdown dokumentiert werden. Die Bewertungskriterien findet man [hier](https://bscw.tbz.ch/bscw/bscw.cgi/d29084554/M300_LB1_Bewertungsraster.pdf?op=get&open=1).
 
-## Voraussetzungen
+## Voraussetzungen/WichtigeThemen
 Damit der Service erstellt werden kann, müssen vorerst einige Dinge noch erledigt werden:
 
 **GitHub Account**<br />
@@ -32,12 +38,21 @@ Damit unser Client überhaupt Vagrant versteht, muss Vagrant von ihrer Webseite 
 **Visual Studio Code**<br />
 Alle lokalen Repositories an einem Ort zu verwalten und die dazugehörigen Dateien zu bearbeiten ermöglicht uns Visual Studio Code. Stduio Code kann man sich ganz einfach von ihrer Webseite herunterladen.
 
+**Linux** <br />
+Linux ist der Kernel eines Betriebssystems. Linux ist für unterschiedliche Hardware verfügbar und ist Multiuser und Multitasking fähig.
+
+**Virtualisierung** <br />
+ Anstelle einer hardwarebasierten Komponente eine softwarebasierte Komponente erstellt.
+
+ **Versionsverwaltung** <br />
+System zur erfassung von Änderungen an Dokumenten oder Dateien verwendet wird.
+
 Die genaue Anleitung für die installationen:
 [Kapitel 20](https://github.com/mc-b/M300/blob/master/10-Toolumgebung/README.md)
 
 ## Netzwerkplan
 
-![Image](test2.png)        
+![Image](test3.png)        
 
 <div id='id-section2'/>
 
@@ -46,9 +61,46 @@ Die genaue Anleitung für die installationen:
 Bei meinem Service wird ein Webserver erstellt. Auf dem Webserver läuft die Webanwendung phpMyadmin, welches mit dem sql-Server verbunden ist.
 
 
-#### Zugriff auf den Service
+**Zugriff auf den Service** </br>
+Man muss in einem Browser http://10.71.13.8:80/phpmyadmin eingeben.
 
-#### Das Vagrantfile
+**Das Vagrantfile** </br>
+Installation vom Webserver und php
+~~~~ 
+sudo apt-get -y install apache2
+  sudo apt-get -y install php libapache2-mod-php
+~~~~
+Debconf instllatieren. Ist notwendig für Prompt anfragen
+~~~~ 
+sudo apt-get install -y debconf-utils
+~~~~
+Die ersten zwei Befehle sind Promptbefehle. Anschliessend wird der Mysql-Server installiert
+~~~~ 
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password asdf123'   
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password asdf123'
+sudo apt-get -y install mysql-server
+~~~~
+Hier geben wir die Promptbefehle für phpMyAdmin ein und laden anschliessend phpMyAdmin herunter.
+~~~~ 
+debconf-set-selections <<< "phpmyadmin phpmyadmin/dbconfig-install boolean true"
+debconf-set-selections <<< "phpmyadmin phpmyadmin/app-password-confirm password asdf123"
+debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/admin-pass password asdf123"
+debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/app-pass password asdf123"
+debconf-set-selections <<< "phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2"
+sudo apt-get -y install phpmyadmin     
+~~~~
+Wir müssen die FireWall erlauben. Anschliessend können wir FireWall Regeln hinzufügen.
+~~~~ 
+sudo ufw -f enable
+sudo ufw allow 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 8080/tcp
+~~~~
+Zum Schluss erstellen wir einen User ohne Rechte
+~~~~ 
+adduser test
+echo 'view:pass' | chpasswd
+~~~~
 
 ## Sicherheitsaspekte
 
@@ -56,7 +108,7 @@ Um die Sicherheit unseres Services zu schützen, werden in unser Vagrantfile die
 * Benutzer mit Rechtevergabe
 * Firewall
 * Reverse Proxy<br />
-Durch die entsprechenden Rechtevergabe können unbefugte Benutzer nicht Dinge machen, die eigentlich nicht für sie Gedacht wären. Mit der Firewall können wir entsprechende Ports öffnen und schliessen. Nur Ports, welche für den Service benötigt sind, sollten offen sein. Durch den Reverse-Proxy ist der Webserver vor direkten Angriffen von aussen gesichert. Die Internetuser kommunizieren mit dem Proxy, und nicht mit dem Webserver.
+Durch die entsprechenden Rechtevergabe können unbefugte Benutzer nicht Dinge machen, die eigentlich nicht für sie Gedacht wären. Mit der Firewall können wir entsprechende Ports öffnen und schliessen. Nur Ports, welche für den Service benötigt sind, sollten offen sein. 
 
 ## Testing
 
@@ -65,6 +117,7 @@ Durch die entsprechenden Rechtevergabe können unbefugte Benutzer nicht Dinge ma
 | Vom Client auf http://localhost:80 zugreifen.                                                                 | Funktioniert. Die Default Page des Webservers wird angezeigt.                                                        |
 | Vom Client (192.168.40.1) auf http://localhost:80/phpmyadmin                                           | Funktioniert. Phpmyadmin Startseite wird angezeigt.                                     |
 | git clone                                                                                              | Funktioniert einwandfrei                                                        |
+| FireWall Status überprüfen                                                                                            | FireWall is running                                                        |
 
   
 
