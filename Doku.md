@@ -52,7 +52,7 @@ Die genaue Anleitung für die installationen:
 
 ## Netzwerkplan
 
-![Image](test3.png)        
+![Image](Netzwerkbild.png)        
 
 <div id='id-section2'/>
 
