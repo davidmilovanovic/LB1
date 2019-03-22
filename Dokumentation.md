@@ -57,11 +57,23 @@ Durch die entsprechenden Rechtevergabe können unbefugte Benutzer nicht Dinge ma
 
 ## Testing
 
-| Was? | Erwartete Ausgabe | Tatsächliche Ausgabe |
-|:--:|:--:|
-|Repository Clonen|Das Repository wird aufden Client abgelegt| Funktioniert einwandfrei
-|Vagrant up|Erstellung von unser Service|VM wurde erstellt
-|Apache Webserver kontrollieren|localhost:80 in Web Browser aufrufen|
+1) git clone
+2) vagrant up
+3) Apache Webserver kontrollieren:
+
+  - http://localhost:80 in Web Browser aufrufen.
+  
+  Erwartetes Ergebnis: Apache Webseite erreichbar.
+  
+4) PHPMyAdmin kontrollieren:
+
+  - http://localhost:80/phpmyadmin in Web Browser aufrufen
+  
+  -> Username: root
+  -> Password: asdf123
+  
+  Erwartetes Ergebnis: PHPMyAdmin Webseite erreichbar und Anmeldung erfolgreich.
+  
 
 ## Wissenszuwachs
 
