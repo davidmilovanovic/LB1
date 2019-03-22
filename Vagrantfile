@@ -14,7 +14,7 @@ config.vm.network "public_network", ip:"10.71.13.8"
 
 config.vm.provider "virtualbox" do |vb|
 
-  vb.memory = "512"  
+  vb.memory = "1024"  
 
 end
 
@@ -63,9 +63,9 @@ config.vm.provision "shell", inline: <<-SHELL
 
         sudo ufw allow 8080/tcp
 
-#User erstellen
-#adduser test
-#echo 'view:pass' | chpasswd
+      #User erstellen
+        #sudo adduser test
+        #sudo echo 'view:pass' | chpasswd
 
 SHELL
 
