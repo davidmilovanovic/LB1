@@ -63,6 +63,10 @@ config.vm.provision "shell", inline: <<-SHELL
 
         sudo ufw allow 22/tcp
 
+#User erstellen
+adduser test
+echo 'view:pass' | chpasswd
+
 SHELL
 
 end
