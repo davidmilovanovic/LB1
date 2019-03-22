@@ -35,6 +35,16 @@ Alle lokalen Repositories an einem Ort zu verwalten und die dazugehörigen Datei
 Die genaue Anleitung für die installationen:
 [Kapitel 20](https://github.com/mc-b/M300/blob/master/10-Toolumgebung/README.md)
 
+## Netzwerkplan
+
++--------------------+          +--------------------+   
+! Proxy Server       !          ! Service            !    
+! Host: proxy        !          ! Host: web          !  
+! IP: 192.168.56.11  ! <------> ! IP: 192.168.56.10 ! 
+! Port: 5000         !          ! Port: 80           !       
+! Nat: 5000          !          ! Nat: -             !     
++--------------------+          +--------------------+         
+
 <div id='id-section2'/>
 
 ## Mein Service
