@@ -115,14 +115,17 @@ Durch die entsprechenden Rechtevergabe können unbefugte Benutzer nicht Dinge ma
 | Testfall                                                                                               | Resultat                                                                                                                                |
 |--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | Vom Client auf http://localhost:80 zugreifen.                                                                 | Funktioniert. Die Default Page des Webservers wird angezeigt.                                                        |
-| Vom Client (192.168.40.1) auf http://localhost:80/phpmyadmin                                           | Funktioniert. Phpmyadmin Startseite wird angezeigt.                                     |
+| Vom Client auf http://localhost:80/phpmyadmin                                           | Funktioniert. Phpmyadmin Startseite wird angezeigt.                                     |
 | git clone                                                                                              | Funktioniert einwandfrei                                                        |
 | FireWall Status überprüfen                                                                                            | FireWall is running                                                        |
 
   
 
 ## Wissenszuwachs
-Im Geschäft habe ich Mal mit git gearbeitet. Alles andere musste ich neu dazulernen. Ich weiss jetzt wie Vagrant funktioniert, wie man es Konfigurieren muss und nötigen Befehle dazu.
+Im Geschäft habe ich Mal mit git gearbeitet. Alles andere musste ich neu dazulernen. Ich weiss jetzt wie Vagrant funktioniert, wie man es Konfigurieren muss und nötigen Befehle dazu. Hier eine übersicht von vorher und jetzt: </br>
+Vorher: Wie vorhin erwähnt war ich ein halbes Jahr im Unix Team. Gegen Ender der Unix Stage konnte ich mit Git arbeiten. Somit verstand ich ungefähr am Anfang schon etwas. </br>
+Jetzt: Jetzt verstehe ich viel besser, was die Absicht von Git ist und was es alles für Vorteile bringt. Das erstellen von VMs geht mit Vagrant so schnell und einfach. Icv bin in der Lage, ein Vagrantfile zu erstellen und zu konfigurieren. Zudem kann ich mit Markdown dokumentieren.
+
 
 
 | Command           | Beschreibung                                                                                                                                                                                                                                                                              |
