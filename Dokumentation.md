@@ -57,10 +57,11 @@ Durch die entsprechenden Rechtevergabe können unbefugte Benutzer nicht Dinge ma
 
 ## Testing
 
-|Spalte 1 | Spalte 2|
+| Was? | Erwartete Ausgabe | Tatsächliche Ausgabe |
 |:--:|:--:|
-|Zeile 1|Zeile 2|
-
+|Repository Clonen|Das Repository wird aufden Client abgelegt| Funktioniert einwandfrei
+|Vagrant up|Erstellung von unser Service|VM wurde erstellt
+|Apache Webserver kontrollieren|localhost:80 in Web Browser aufrufen|
 
 ## Wissenszuwachs
 
